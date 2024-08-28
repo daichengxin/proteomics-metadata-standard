@@ -1,18 +1,18 @@
 # Proteomics Sample Metadata Format
 
+[![Version](https://flat.badgen.net/static/sdrf-proteomics/1.0.0/orange)](CHANGELOG.md)
 [![License](https://flat.badgen.net/github/license/bigbio/proteomics-metadata-standard)](https://github.com/bigbio/proteomics-metadata-standard/blob/master/LICENSE)
 [![Open Issues](https://flat.badgen.net/github/open-issues/HUPO-PSI/mzSpecLib)](https://github.com/bigbio/proteomics-metadata-standard/issues)
 [![Open PRs](https://flat.badgen.net/github/open-prs/bigbio/proteomics-metadata-standard)](https://github.com/bigbio/proteomics-metadata-standard/pulls)
 ![Contributors](https://flat.badgen.net/github/contributors/bigbio/proteomics-metadata-standard)
 ![Watchers](https://flat.badgen.net/github/watchers/bigbio/proteomics-metadata-standard)
 ![Stars](https://flat.badgen.net/github/stars/bigbio/proteomics-metadata-standard)
-[![Read the Docs](https://readthedocs.org/projects/proteomics-sample-metadata/badge/?version=latest)](https://proteomics-sample-metadata.readthedocs.io/en/latest/)
 
 ## Improving metadata annotation of Proteomics datasets
 
 Metadata is essential in proteomics data repositories and is crucial to interpret and reanalyze the deposited data sets. While the dataset general description and standard data file formats are supported and captured for every dataset by ProteomeXchange partners, the information regarding the sample to data files is mostly missing. Recently, members of the European Bioinformatics Community for Mass Spectrometry (EuBIC - https://eubic-ms.org/) have created this open-source project to enable the standardization of sample metadata of public proteomics data sets.
 
-The Proteomics Sample Metadata Project aims to standardize the way ProteomeXchange partners and the proteomics community capture the relation between the _samples_ and the _data_ generated within a PX submission. We have adapted the [MAGE-TAB v1.1 format](https://www.fged.org/projects/mage-tab/) to capture necessary metadata for Proteomics experiments to allow automated re-processing. The MAGE-TAB (MicroArray Gene Expression Tabular) is the file format to store the metadata and sample information on transcriptomics experiments. By repurposing and extending the MAGE-TAB for Proteomics, we aim to provide a format for future submissions of multiomics experiments to ProteomeXchange partners and better integration with other omics data. The MAGE-TAB is divided in two main files: IDF (Investigation Description Format) and SDRF (Sample and Data Relationship Format). We will describe how these two files are adapted for Proteomics.
+The Proteomics Sample Metadata Project aims to standardize the way ProteomeXchange partners and the proteomics community capture the relation between the _samples_ and the _data_ generated within a PX submission. We have adapted the [MAGE-TAB v1.1 format](https://www.fged.org/projects/mage-tab/) to capture the necessary metadata for Proteomics experiments to allow automated re-processing. The MAGE-TAB (MicroArray Gene Expression Tabular) is the file format to store the metadata and sample information on transcriptomics experiments. By repurposing and extending the MAGE-TAB for Proteomics, we aim to provide a format for future submissions of multiomics experiments to ProteomeXchange partners and better integration with other omics data. The MAGE-TAB is divided in two main files: IDF (Investigation Description Format) and SDRF (Sample and Data Relationship Format). We will describe how these two files are adapted for Proteomics.
 
 Our goal is to ensure maximum reusability of the deposited data. Our work aims to define the minimum information required to report the experimental design of proteomics experiments, enabling the use and reuse of the deposited data by the proteomics community. The following _Use Cases_ should be considered to design the Proteomics Sample Metadata Format:
 
@@ -32,7 +32,7 @@ While the experiment general description is captured for all the PX submissions 
 
 ## Final PSI specification
 
-The final HUPO-PSI specification is: [SDRF HUPO-PSI](psi-document/SDRF_Proteomics_Specification_Final.pdf)
+The final HUPO-PSI specification is: [SDRF HUPO-PSI](psi-document/SDRF_Proteomics_Specification_v1.0.0.pdf)
 
 ## How to contribute
 
@@ -40,7 +40,7 @@ External contributors, researchers and the proteomics community are more than we
 
 Contribute with the specification: you can contribute to the specification with ideas or refinements by adding an issue into the [issue tracker](https://github.com/bigbio/proteomics-metadata-standard/issues) or performing a PR.
 
-In the [annotated projects](https://github.com/bigbio/proteomics-metadata-standard/tree/master/annotated-projects) folder users can see different public datasets that have been annotated so far by the contributors. If you would like to join these efforts, make a Fork of this repo and perform a pull request (PR) with your annotated project. If you don't have a project in mind, you can take one project from the [issues](https://github.com/bigbio/proteomics-metadata-standard/issues) and perform the annotation.
+In the [annotated projects](https://github.com/bigbio/proteomics-metadata-standard/tree/master/annotated-projects) folder, users can see different public datasets that have been annotated so far by the contributors. If you would like to join these efforts, make a Fork of this repo and perform a pull request (PR) with your annotated project. If you don't have a project in mind, you can take one project from the [issues](https://github.com/bigbio/proteomics-metadata-standard/issues) and perform the annotation.
 
 Annotate a dataset in 5 steps:
 
@@ -58,7 +58,7 @@ pip install sdrf-pipelines
 validate the SDRF file
 
 ```bash
-parse_sdrf validate-sdrf --sdrf_file sdrf.tsv
+parse_sdrf validate-sdrf --sdrf_file PXD020294.sdrf.tsv
 ```
 
 You can read more about the validator [here](https://github.com/bigbio/sdrf-pipelines).
@@ -67,12 +67,10 @@ You can read more about the validator [here](https://github.com/bigbio/sdrf-pipe
 
 ## 30 Minutes Guide to MAGE-TAB for Proteomics 
 
-Documentation page (https://proteomics-sample-metadata.readthedocs.io/en/latest/)
-
-We have created a 30 minutes Guide to the file format in [the github repository](https://github.com/bigbio/proteomics-metadata-standard/wiki). Additionally the following materials are relevant for new users: 
+We have created a 30-minute Guide to the file format in [the github repository](https://github.com/bigbio/proteomics-metadata-standard/wiki). Additionally, the following materials are relevant for new users: 
 
 - [Introduction to MAGE-TAB proteomics - Slides](https://github.com/bigbio/proteomics-metadata-standard/raw/master/additional-documentation/presentation-20200313.pptx)
-- [Introduction to MAGE-TAB proteomics - Youtube Video](https://www.youtube.com/watch?v=TMDu_yTzYQM)
+- [Introduction to MAGE-TAB proteomics - YouTube Video](https://www.youtube.com/watch?v=TMDu_yTzYQM)
 
 
 ## Core contributors and collaborators
